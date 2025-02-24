@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.title-container {
+  padding-top: 65px;
+  padding-bottom: 30px;
+}
+
+.title-container > h1, 
+.title-container > p {
+  text-align: center;
+}
+
+.grid-container {
+  padding: 25px;
+
+  display: grid;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  padding: 8px;
+}
+
+.color-palette {
+  display: flex;
+
+  height: 100px;
+
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.color-palette > div {
+  flex: 1;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.color-palette > div > span {
+  display: none;
+}
+
+.color-palette > div:hover {
+  flex: 2.5;
+}
+
+.color-palette > div:hover > span {
+  height: 100%;
+  color: white;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.purple {
+  background-color: #cdb4db;
+
+}
+
+.lightpink {
+  background-color: #ffc8dd;
+}
+
+.pink {
+  background-color: #ffafcc;
+}
+
+.lightblue {
+  background-color: #bde0fe;
+}
+
+.blue {
+  background-color: #a2d2ff;
+}
+
+.more {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 6px;
+
+  color: #ffc8dd;
+  cursor: pointer;
+}
+
+.more > span:hover,
+.more > p:hover {
+  color: #cdb4db;
+}
+
+@media (min-width: 741px) and (max-width: 990px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1130px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .color-palette {
+    height: 125px;
+  }
+}
+
+@media (min-width: 1131px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .color-palette {
+    height: 125px;
+  }
+}
